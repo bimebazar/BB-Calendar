@@ -1,6 +1,6 @@
 
 import React from 'react';
-import Range from '../General';
+import Range from './General';
 
 const DayPicker = (props) => {
 

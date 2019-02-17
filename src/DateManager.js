@@ -1,5 +1,4 @@
 
-import NumbersConvertor from '../NumbersConvertor';
 import moment from 'moment-jalaali'
 
 const months = [
@@ -89,7 +88,7 @@ export default function DateManager() {
         convertDateToPersian: function (date) {
             
             
-                    return date? NumbersConvertor().convertToLatin(moment(date, 'YYYY-MM-DD').format('jYYYY/jMM/jDD')) : null
+                    return date? moment(date, 'YYYY-MM-DD').format('jYYYY/jMM/jDD') : null
 
            
         },

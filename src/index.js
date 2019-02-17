@@ -1,6 +1,7 @@
 import React from 'react';
 
 
+
 import MonthPicker from './MonthPicker';
 import moment from 'moment-jalaali'
 
@@ -302,13 +303,11 @@ class DatePicker extends React.Component {
         if (mm.jMonth() != 11) {
             return months[mm.jMonth()].days
         } else {
-
             if (moment.jIsLeapYear(mm.jYear()))
                 return 30;
             else
                 return 29
         }
-
         return 31;
     }
 
