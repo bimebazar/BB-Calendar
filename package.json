@@ -12,6 +12,9 @@
     "type": "git",
     "url": "git+https://github.com/bimebazar/BB-Calendar.git"
   },
+  "peerDependencies": {
+    "react": "^16.8.2"
+  },
   "keywords": [
     "bimebazar",
     "calendar",
