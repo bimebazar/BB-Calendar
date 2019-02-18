@@ -5,8 +5,7 @@ import React from 'react';
 import MonthPicker from './MonthPicker';
 import moment from 'moment-jalaali'
 
-
-
+import './style.scss'
 
 import DayPicker from './DayPicker';
 import YearPicker from './YearPicker';
@@ -330,7 +329,7 @@ class DatePicker extends React.Component {
 
 
                     <div data-navigator="" className="datepicker-navigator">
-                        <div className="pwt-btn pwt-btn-prev" onClick={this.onNextClick}>&lt;</div>
+                        <div className="pwt-btn pwt-btn-prev" onClick={this.onNextClick}>&gt;</div>
 
                         {this.state.mode === 'day' && <div onClick={this.onMonthPickerClick} className="pwt-btn pwt-btn-switch"> 
                         {months[this.state.month - 1].title} {this.state.year}</div>}
@@ -340,7 +339,7 @@ class DatePicker extends React.Component {
 
                         {this.state.mode === 'year' && <div onClick={this.onYearPickerClick} className="pwt-btn pwt-btn-switch">انتخاب سال</div>}
 
-                        <div className="pwt-btn pwt-btn-next" onClick={this.onPrevClick}>&gt;</div>
+                        <div className="pwt-btn pwt-btn-next" onClick={this.onPrevClick}>&lt;</div>
                     </div>
 
                     <div className="datepicker-grid-view">
