@@ -40,38 +40,6 @@ class DatePicker extends React.Component {
     };
   }
 
-  //   initialize = props => {
-  //     var todayDate = new Date();
-  //     todayDate = moment(
-  //       todayDate.getFullYear() +
-  //         "/" +
-  //         (todayDate.getMonth() + 1) +
-  //         "/" +
-  //         todayDate.getDate()
-  //     );
-  //     this.setState(
-  //       {
-  //         mode: props.mode == "birthdate" ? "year" : "day",
-  //         day: props.date && props.date.day ? props.date.day : todayDate.jDate(),
-  //         month:
-  //           props.date && props.date.month
-  //             ? props.date.month
-  //             : todayDate.jMonth() + 1,
-  //         year:
-  //           props.date && props.date.year ? props.date.year : todayDate.jYear(),
-  //         firstDayOfMonthWeekDay: 0,
-  //         startYear:
-  //           props.mode == "birthdate"
-  //             ? todayDate.jYear() - 20
-  //             : todayDate.jYear() - 2,
-  //         picker: "date"
-  //       },
-  //       () => {
-  //         this.computeMonthDaysArrangment();
-  //       }
-  //     );
-  //   };
-
   componentDidMount() {
     if (this.props.date){
       this.setState(
@@ -89,29 +57,6 @@ class DatePicker extends React.Component {
       this.computeMonthDaysArrangment();
     }
   }
-
-
-  //   static getDerivedStateFromProps(nextProps, prevState) {
-  //     if (nextProps.date &&) {
-  //       return {
-  //         day: nextProps.date ? nextProps.date.day : 1,
-  //         month: nextProps.date ? nextProps.date.month : 1,
-  //         year: nextProps.date ? nextProps.date.year : 1397
-  //       };
-  //     } else return null;
-  //   }
-
-  //   componentWillReceiveProps(nextProps) {
-  //     if (nextProps.date) {
-  //       this.setState({
-  //         day: nextProps.date ? nextProps.date.day : 1,
-  //         month: nextProps.date ? nextProps.date.month : 1,
-  //         year: nextProps.date ? nextProps.date.year : 1397
-  //       });
-  //     } else {
-  //       this.initialize(this.props);
-  //     }
-  //   }
 
   onMonthPickerClick = () => {
     this.setState({ mode: "month" });
