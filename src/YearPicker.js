@@ -12,7 +12,7 @@ const YearPicker = (props) => {
 
             {
                 Range(props.startYear - 12, props.startYear + 4).map(x =>
-                    <div className={"year-label " + ((props.date.year == x) ? ' selected' : null)} onClick={() => props.onSelectYearClick(x)}>{x}</div>
+                    <div key={x} className={"year-label " + ((props.date.year == x) ? ' selected' : null)} onClick={() => props.onSelectYearClick(x)}>{x}</div>
                 )
             }
 

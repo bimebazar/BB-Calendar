@@ -9,7 +9,7 @@ const MonthPicker = (props) => {
 
 
 {props.months.map((item, index) => (
-    <div  className={"month-label " + ((props.date.month==item.id)?' selected':null )}    onClick={()=>props.onSelectMonthClick(item.id)}>{item.title}</div>
+    <div key={index} className={"month-label " + ((props.date.month==item.id)?' selected':null )}    onClick={()=>props.onSelectMonthClick(item.id)}>{item.title}</div>
 
                                                 ))}
 
